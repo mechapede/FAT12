@@ -1,0 +1,14 @@
+
+//test expanding directory entries
+for i in {1..500}; do cp foobar.txt "$i.txt"; ./diskput testAdd.IMA "/SUBlayer/$i.txt"; rm "$i.txt"; done
+
+//test max root directory entries
+for i in {1..224}; do cp foobar.txt "$i.txt"; ./diskput testAdd.IMA "$i.txt"; rm "$i.txt"; done
+
+//test max file size
+TODO
+
+//test large file
+
+//Also test extracting one of the above, and seeing if it works
+//use diskinfo inbetween and disklist
